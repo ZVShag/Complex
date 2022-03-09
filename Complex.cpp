@@ -15,9 +15,13 @@ public:
 
     void Comprazn(Complex a, Complex b)
     {
-        cout << a.vesh - b.vesh << " - " << a.mnim - b.mnim<<"i";
+        cout << a.vesh - b.vesh << " + " << a.mnim - b.mnim<<"i";
     }
 
+    void Compproiz(Complex a, Complex b)
+    {
+        cout << a.vesh * b.vesh - a.mnim*b.mnim << " + " << a.mnim*b.vesh+b.mnim*a.vesh << "i";
+    }
 
 
 
