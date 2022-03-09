@@ -10,12 +10,12 @@ public:
 
     void Compsum(Complex a, Complex b)
     {
-        cout << a.vesh + b.vesh << a.mnim + b.mnim;
+        cout << a.vesh + b.vesh <<" + "<< a.mnim + b.mnim<<"i";
     }
 
     void Comprazn(Complex a, Complex b)
     {
-        cout << a.vesh - b.vesh << a.mnim - b.mnim;
+        cout << a.vesh - b.vesh << " - " << a.mnim - b.mnim<<"i";
     }
 
 
