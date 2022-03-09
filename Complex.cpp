@@ -13,6 +13,14 @@ public:
         cout << a.vesh + b.vesh << a.mnim + b.mnim;
     }
 
+    void Comprazn(Complex a, Complex b)
+    {
+        cout << a.vesh - b.vesh << a.mnim - b.mnim;
+    }
+
+
+
+
 };
 int main()
 {
