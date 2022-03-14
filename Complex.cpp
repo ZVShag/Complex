@@ -34,5 +34,5 @@ int main()
     Complex num1(2, 3);
     Complex num2(2, 3);
     num1.Comprazn(num2);
+    num2.Compsum(num1);
 }
-
