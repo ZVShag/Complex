@@ -1,5 +1,7 @@
 ﻿
 #include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
 class Complex
 {
@@ -11,9 +13,15 @@ public:
     float Vesh() { return vesh; }
     int Mnim() { return mnim; }
 
-    void Compsum(Complex b)
+    string Compsum(Complex b)
     {
-        cout << vesh + b.Vesh() << " + " << mnim + b.Mnim() << "i"<<endl;
+        int nvesh = vesh + b.Vesh();
+        int nmnim = mnim + b.Mnim();
+        auto svesh = to_string(nvesh)+" + "+to_string(nmnim)+"i";
+        return svesh;
+
+
+
     }
     void Print()
     {
@@ -39,10 +47,11 @@ public:
 };
 int main()
 {
+    ofstream fout("rezult.txt", ios_base::out | ios_base::trunc);
     int a, b, c, d;
     cin >> a >> b >> c >> d;
     Complex num1(a, b);
     Complex num2(c, d);
-    num2.Compsum(num1);
+    fout<<num2.Compsum(num1);
     num2.Compproiz(num1);
 }
