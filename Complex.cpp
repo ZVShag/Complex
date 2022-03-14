@@ -15,6 +15,10 @@ public:
     {
         cout << vesh + b.Vesh() << " + " << mnim + b.Mnim() << "i";
     }
+    void Print()
+    {
+        cout << vesh<< " + " << mnim<< "i";
+    }
 
     void Comprazn(Complex b)
     {
@@ -33,6 +37,5 @@ int main()
 {
     Complex num1(2, 3);
     Complex num2(2, 3);
-    num1.Comprazn(num2);
     num2.Compsum(num1);
 }
