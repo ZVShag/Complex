@@ -13,21 +13,25 @@ public:
 
     void Compsum(Complex b)
     {
-        cout << vesh + b.Vesh() << " + " << mnim + b.Mnim() << "i";
+        cout << vesh + b.Vesh() << " + " << mnim + b.Mnim() << "i"<<endl;
     }
     void Print()
     {
-        cout << vesh<< " + " << mnim<< "i";
+        cout << vesh<< " + " << mnim<< "i"<<endl;
     }
 
     void Comprazn(Complex b)
     {
-        cout << vesh - b.Vesh() << " + " << mnim - b.Mnim() << "i";
+        if (mnim - b.Mnim()>0)
+            cout << vesh - b.Vesh() << " + " << mnim - b.Mnim() << "i"<<endl;
+        else
+            cout << vesh - b.Vesh() << " " << mnim - b.Mnim() << "i" << endl;
+
     }
 
-    void Compproiz(Complex a, Complex b)
+    void Compproiz(Complex b)
     {
-        cout << vesh * b.Vesh() - mnim * b.Mnim() << " + " << mnim * b.Vesh() + b.Mnim() * vesh << "i";
+        cout << vesh * b.Vesh() - mnim * b.Mnim() << " + " << mnim * b.Vesh() + b.Mnim() * vesh << "i"<<endl;
     }
 
 
@@ -35,7 +39,10 @@ public:
 };
 int main()
 {
-    Complex num1(2, 3);
-    Complex num2(2, 3);
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    Complex num1(a, b);
+    Complex num2(c, d);
     num2.Compsum(num1);
+    num2.Compproiz(num1);
 }
