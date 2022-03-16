@@ -9,19 +9,16 @@ class Complex
     int mnim;
 public:
     Complex(float a, int b) { vesh = a; mnim = b; }
-
+    ~Complex() { cout << "Free mome" << endl; }
     float Vesh() { return vesh; }
     int Mnim() { return mnim; }
-
+    
     string Compsum(Complex b)
     {
         int nvesh = vesh + b.Vesh();
         int nmnim = mnim + b.Mnim();
         auto svesh = to_string(nvesh)+" + "+to_string(nmnim)+"i";
         return svesh;
-
-
-
     }
     void Print()
     {
@@ -54,4 +51,8 @@ int main()
     Complex num2(c, d);
     fout<<num2.Compsum(num1);
     num2.Compproiz(num1);
+}
+void master()
+{
+
 }
